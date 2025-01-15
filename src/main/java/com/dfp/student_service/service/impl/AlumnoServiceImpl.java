@@ -19,7 +19,6 @@ public class AlumnoServiceImpl implements AlumnoService {
     @Override
     public Flux<Alumno> getAllAlumnosActivos() {
         return alumnoRepository.findByEstado(Constants.ESTADO_ACTIVO);
-       // return alumnoRepository.findAll();
     }
 
     @Override
