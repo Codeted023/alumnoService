@@ -74,7 +74,6 @@ class AlumnoControllerTest {
 
         when(alumnoService.saveAlumno(any(Alumno.class))).thenReturn(Mono.empty());
 
-        // Act & Assert
         webTestClient.post()
                 .uri("/alumnos")
                 .bodyValue(alumno1)
