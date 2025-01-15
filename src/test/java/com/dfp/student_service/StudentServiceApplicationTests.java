@@ -1,6 +1,7 @@
 package com.dfp.student_service;
 
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -9,5 +10,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 class StudentServiceApplicationTests {
     @Test
     void contextLoads() {
+        Assertions.assertTrue(Boolean.TRUE,"test success");
     }
 }

@@ -21,7 +21,6 @@ public class DataSetupService implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         String query = StreamUtils.copyToString(initSql.getInputStream(), StandardCharsets.UTF_8);
-        System.out.println(query);
         this.entityTemplate
                 .getDatabaseClient()
                 .sql(query)

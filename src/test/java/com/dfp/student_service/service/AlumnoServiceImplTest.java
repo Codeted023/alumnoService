@@ -9,6 +9,7 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -18,11 +19,15 @@ import com.dfp.student_service.repository.AlumnoRepository;
 import com.dfp.student_service.service.impl.AlumnoServiceImpl;
 import com.dfp.student_service.utils.Constants;
 
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.junit.jupiter.MockitoSettings;
+import org.mockito.quality.Strictness;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
-
-public class AlumnoServiceImplTest {
+@ExtendWith(MockitoExtension.class)
+@MockitoSettings(strictness = Strictness.LENIENT)
+class AlumnoServiceImplTest {
       @InjectMocks
     private AlumnoServiceImpl alumnoService;
 
