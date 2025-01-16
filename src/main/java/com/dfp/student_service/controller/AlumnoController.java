@@ -4,6 +4,8 @@ import com.dfp.student_service.model.Alumno;
 import com.dfp.student_service.service.AlumnoService;
 
 import jakarta.validation.Valid;
+
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.WebExchangeBindException;
 
@@ -25,6 +27,7 @@ public class AlumnoController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public Mono<Void> createStudent(@Valid @RequestBody Alumno alumno) {
         return alumnoService.saveAlumno(alumno)
                 .then()

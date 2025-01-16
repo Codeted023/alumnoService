@@ -6,5 +6,5 @@ CREATE TABLE IF NOT EXISTS alumnos (
     edad INT
 );
 
-INSERT INTO alumnos (id, nombre, apellido, estado, edad) 
-VALUES (1, 'andre', 'pantoja', 'activo', 23);
+--INSERT INTO alumnos (id, nombre, apellido, estado, edad) 
+--VALUES (1, 'andre', 'pantoja', 'activo', 23);

@@ -78,7 +78,7 @@ class AlumnoControllerTest {
                 .uri("/alumnos")
                 .bodyValue(alumno1)
                 .exchange()
-                .expectStatus().isOk()
+                .expectStatus().isCreated()
                 .expectBody().isEmpty();
 
         verify(alumnoService, times(1)).saveAlumno(any(Alumno.class));
